@@ -23,6 +23,7 @@ LOCAL_SRC_FILES := android_fm.cpp \
 ifneq ($(strip $(TARGET_ARCH)),arm64)
 LIBRARY_PATH:="/system/lib/"
 LOCAL_CFLAGS:= -DLIBRARY_PATH=\"$(LIBRARY_PATH)\"
+LOCAL_CFLAGS += -Wno-unused-variable -Wno-unused-function -Wno-unused-label
 endif
 
 LOCAL_REQUIRED_MODULES := libfmradio.v4l2-fm brcm-uim-sysfs
